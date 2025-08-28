@@ -1,0 +1,255 @@
+/* Additions to existing CSS */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #1a2c52; /* Dark navy blue */
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.menu-header {
+  color: #0b1d51;
+  text-align: center;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.menu-header h1 {
+ font-size: 2.8rem;
+}
+
+.tabs-container {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 10px;
+  padding: 0;
+  margin: 0 0 20px 0;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #e8ecfa;
+  border-radius: 30px;
+  border: 2px solid #1a2c52;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+  background: #1a2c52;
+  color: #fff;
+}
+
+.tab-panel {
+  display: none;
+}
+
+.tab-panel.show {
+  display: block;
+}
+
+/* Grid for Facilities */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.facility-box {
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.facility-box img {
+  width: 80px;
+  height: 80px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.facility-box p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #1a2c52;
+}
+
+/* Flip Cards for Rules */
+.flip-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.flip-card {
+  width: 200px;
+  height: 150px;
+  perspective: 1000px;
+}
+
+.flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-front, .flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 12px;
+  backface-visibility: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+  color: white;
+  font-weight: 600;
+}
+
+.flip-front {
+  font-size: 1.1rem;
+}
+
+.flip-back {
+  transform: rotateY(180deg);
+  font-size: 0.95rem;
+}
+
+/* Color styles */
+.do-card .flip-front {
+  background-color: #28a745;
+}
+
+.do-card .flip-back {
+  background-color: #218838;
+}
+
+.dont-card .flip-front {
+  background-color: #dc3545;
+}
+
+.dont-card .flip-back {
+  background-color: #bd2130;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+/* Facility Box Description */
+.facility-box h3 {
+  margin: 10px 0 5px;
+  font-size: 1.2rem;
+  color: #1a2c52;
+}
+
+.facility-box .desc {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+/* Rules Grid */
+.rules-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.rule-card {
+  background: #fff;
+  padding: 20px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s, box-shadow 0.3s ease-in-out;
+}
+
+.rule-card .icon {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.rule-card h3 {
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.rule-card p {
+  font-size: 0.95rem;
+  color: #333;
+}
+
+/* Colors */
+.rule-card.do .icon {
+  color: #28a745;
+}
+
+.rule-card.dont .icon {
+  color: #dc3545;
+}
+
+.rule-card.do {
+  border-left: 5px solid #28a745;
+}
+
+.rule-card.dont {
+  border-left: 5px solid #dc3545;
+}
+
+/* Animation */
+.rule-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+/* Existing styles remain the same above... */
+
+/* Facilities Image Size & Box Animation */
+.facility-box {
+  background: #fff;
+  border-radius: 12px;
+  text-align: center;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.facility-box:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.15);
+}
+
+.facility-box img {
+  width: 250px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}

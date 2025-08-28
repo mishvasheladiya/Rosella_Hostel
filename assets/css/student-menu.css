@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f4f7ff;
+  color: #1a2c52;
+}
+
+/* Layout for pages with sidebar */
+.dashboard-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 260px;  /* Sidebar width */
+  margin-top: auto;   /* Header + navbar height */
+  padding: 40px 30px;
+}
+
+/* Header */
+.menu-header {
+  background: linear-gradient(to right, #0b1d51, #162f7f);
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+  margin-bottom: 30px;
+}
+
+.menu-header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.menu-header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* Tabs */
+.tabs-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #e8ecfa;
+  border-radius: 30px;
+  border: 2px solid #1a2c52;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+  background: #1a2c52;
+  color: #fff;
+}
+
+/* Tab Content Panel */
+.tab-panel {
+  display: none;
+  background: white;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-panel.show {
+  display: block;
+}
+
+.tab-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-panel li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+}
+
+.tab-panel li strong {
+  color: #1a2c52;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

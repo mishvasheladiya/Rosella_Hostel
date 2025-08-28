@@ -1,0 +1,138 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f6f9ff;
+  color: #0b1d51;
+}
+
+.dashboard-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 260px; /* Match sidebar width */
+  padding: 10px 30px; /* reduce top padding */
+  width: calc(100% - 260px);
+  box-sizing: border-box;
+}
+
+/* Table Styles */
+.table-container {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+  overflow-x: auto;
+    margin-top: 0;
+  animation: fadeInUp 0.7s ease;
+}
+
+.table-header h2 {
+  margin: 0;       /* remove default h2 margin */
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: auto;
+}
+
+thead {
+  background-color: #0b1d51;
+  color: #fff;
+}
+
+th, td {
+  padding: 14px 20px;
+  text-align: left;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.stars {
+  font-size: 1.1rem;
+  color: gold;
+  letter-spacing: 2px;
+}
+
+/* Status Badges */
+.status {
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.status.pending {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.status.resolved {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+/* Buttons */
+.submit-btn {
+  padding: 8px 16px;
+  border: none;
+  background-color: #0b1d51;
+  color: white;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.submit-btn:hover {
+  background-color: #2e3d80;
+  transform: scale(1.05);
+}
+
+.submit-btn:disabled {
+  background-color: #aaa;
+  cursor: not-allowed;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Fix */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding: 20px;
+  }
+
+  .header {
+    border-radius: 0;
+  }
+
+  table {
+    font-size: 0.9rem;
+  }
+}

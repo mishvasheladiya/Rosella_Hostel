@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #ffffff;
+  color: #1a2c52;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+.about-hero {
+  color: #0b1d51;
+  text-align: center;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.about-hero h1 {
+  font-size: 2.8rem;
+}
+
+.about-container {
+  max-width: 1100px;
+  margin: 60px auto 100px;
+  padding: 0 20px;
+}
+
+.about-row {
+  display: flex;
+  gap: 60px;
+  margin-bottom: 80px;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.about-row.reverse {
+  flex-direction: row-reverse;
+}
+
+.about-text {
+  flex: 1 1 450px;
+}
+
+.about-text.full-width {
+  flex: 1 1 100%;
+  max-width: 100%;
+}
+
+.about-text h2 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #1a2c52;
+  border-left: 6px solid #162f7f;
+  padding-left: 15px;
+  position: relative;
+}
+
+.about-text h2::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 40px;
+  height: 4px;
+  background: #3a56a4;
+  border-radius: 2px;
+  margin-top: 4px;
+}
+
+.about-text p {
+  font-size: 1.1rem;
+  color: #283350;
+  opacity: 0.95;
+  margin-bottom: 18px;
+}
+
+.about-text p strong {
+  color: #1a2c52;
+}
+
+.about-img {
+  flex: 1 1 450px;
+  text-align: center;
+}
+
+.about-img img {
+  width: 400px;
+  height: 280px;
+  object-fit: cover;
+  border-radius: 20px;
+  box-shadow: 0 12px 30px rgba(22, 47, 127, 0.3);
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  cursor: pointer;
+}
+
+.about-img img:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 20px 50px rgba(22, 47, 127, 0.5);
+}
+
+/* === Reduce space between last three articles === */
+.about-row.full-width {
+  margin-bottom: 40px;
+}
+
+.about-row.full-width:last-child {
+  margin-bottom: 0;
+}
+
+/* === Responsive Design === */
+@media (max-width: 900px) {
+  .about-row {
+    flex-direction: column;
+  }
+  .about-row.reverse {
+    flex-direction: column;
+  }
+  .about-text,
+  .about-img {
+    flex: 1 1 100%;
+  }
+  .about-text h2 {
+    font-size: 1.8rem;
+  }
+  .about-hero h1 {
+    font-size: 2.6rem;
+  }
+  .about-hero p {
+    font-size: 1.1rem;
+  }
+}
+
+/* === Testimonials Section (if used separately) === */
+.testimonials-section {
+  background-color: #f0f6ff;
+  padding: 3rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(11, 37, 69, 0.1);
+  margin-bottom: 3rem;
+}
+
+.testimonials-section h2 {
+  color: #1a2c52;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  font-size: 2.2rem;
+  text-align: center;
+}
+
+.testimonials-wrapper {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.testimonial-card {
+  background: #fff;
+  border-left: 6px solid #1a2c52;
+  padding: 1.5rem 2rem;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(11, 37, 69, 0.15);
+  color: #0b2545;
+  font-style: italic;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 30px rgba(11, 37, 69, 0.3);
+}
+
+.testimonial-card p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+.testimonial-card span {
+  font-weight: 600;
+  font-style: normal;
+  color: #004080;
+  font-size: 1rem;
+  display: block;
+  text-align: right;
+}
+
+/* === Awards Section === */
+.awards-section {
+  background: linear-gradient(135deg, #0b2545, #002c70);
+  color: white;
+  padding: 2.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 44, 112, 0.3);
+  text-align: center;
+  margin-bottom: 3rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+/* === Contact Section === */
+.contact-section {
+  background-color: #e6f0ff;
+  padding: 3rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(11, 37, 69, 0.15);
+  text-align: center;
+}
+
+.contact-section p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  color: #1a2c52;
+  font-weight: 600;
+}
+
+.btn-contact {
+  display: inline-block;
+  background-color: #1a2c52;
+  color: white;
+  padding: 0.8rem 2.5rem;
+  font-weight: 700;
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 15px rgba(11, 37, 69, 0.4);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.btn-contact:hover {
+  background-color: #0b1d51;
+  box-shadow: 0 6px 20px rgba(0, 51, 102, 0.6);
+}

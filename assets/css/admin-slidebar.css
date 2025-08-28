@@ -1,0 +1,122 @@
+.sidebar {
+    position: fixed;
+    top: 115px; /* top-bar + navbar height */
+    left: 0;
+    width: 240px;
+    height: calc(100vh - 115px);
+    background-color: #1A2C52;
+    color: #fff;
+    padding: 25px 15px;
+    overflow-y: auto;
+    z-index: 999;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.3s ease;
+    font-weight: bold;
+
+    
+    /* Hide scrollbar but keep functionality */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE/Edge */
+}
+.sidebar::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+
+.sidebar .nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar .nav-list li {
+    margin-bottom: 10px;
+}
+
+.sidebar .nav-list a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 12px 15px;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.sidebar .nav-list a i {
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.sidebar .nav-list a .nav-text {
+    transition: all 0.3s ease;
+}
+
+/* Tab Animation */
+.sidebar .nav-list a::before {
+    content: '';
+    position: absolute;
+    left: -100%;
+    top: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #4a6cf7;
+    transition: all 0.3s ease;
+}
+
+.sidebar .nav-list a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding-left: 20px;
+}
+
+.sidebar .nav-list a:hover::before {
+    left: 0;
+}
+
+.sidebar .nav-list a.active {
+    background-color: rgba(74, 108, 247, 0.2);
+    color: #fff;
+    font-weight: 500;
+}
+
+.sidebar .nav-list a.active::before {
+    left: 0;
+}
+
+.sidebar .nav-list a.active i {
+    color: #4a6cf7;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .sidebar {
+        width: 70px;
+        padding: 20px 5px;
+    }
+    
+    .sidebar .nav-list a {
+        justify-content: center;
+        padding: 15px 5px;
+    }
+    
+    .sidebar .nav-list a .nav-text {
+        display: none;
+    }
+    
+    .sidebar .nav-list a i {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        transform: translateX(-100%);
+    }
+    
+    .sidebar.active {
+        transform: translateX(0);
+    }
+}

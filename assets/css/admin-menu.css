@@ -1,0 +1,169 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  background-color: #f4f7ff;
+  color: #1a2c52;
+}
+
+/* Layout */
+.dashboard-container {
+  display: flex;
+}
+
+.main-content {
+  margin-left: 260px;
+  padding: 40px 30px;
+}
+
+/* Header (if using a separate one) */
+.menu-header {
+  background: linear-gradient(to right, #0b1d51, #162f7f);
+  padding: 50px 20px;
+  text-align: center;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.menu-header h1 {
+  font-size: 2.8rem;
+  margin: 0;
+}
+
+.menu-header p {
+  font-size: 1.1rem;
+  margin-top: 10px;
+  opacity: 0.85;
+}
+
+/* Tabs */
+.tabs-container {
+  max-width: auto;
+  margin: auto;
+  padding: auto;
+}
+
+.tab-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+  gap: 10px;
+  justify-content: center;
+}
+
+.tab-btn {
+  padding: 10px 20px;
+  background: #e8ecfa;
+  border-radius: 30px;
+  border: 2px solid #1a2c52;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.3s, color 0.3s;
+}
+
+.tab-btn.active {
+  background: #1a2c52;
+  color: #fff;
+}
+
+/* Tab Content */
+.tab-panel {
+  display: none;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 25px 30px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.tab-panel.show {
+  display: block;
+}
+
+.tab-panel ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.tab-panel li {
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.tab-panel li strong {
+  color: #1a2c52;
+  font-weight: 600;
+}
+
+/* Inputs and Text Toggle */
+.meal-text {
+  display: inline-block;
+}
+
+.meal-input {
+  padding: 8px 12px;
+  font-size: 14px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.hidden {
+  display: none !important;
+}
+
+/* Buttons */
+.menu-action-buttons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.menu-action-buttons button {
+  background-color: #1a2c52;
+  color: white;
+  padding: 12px 24px;
+  font-size: 15px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.menu-action-buttons button:hover {
+  background-color: #2e3d6b;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .tab-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -1,0 +1,68 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f0f4ff;
+  color: #0b1d51;
+  padding: 40px 20px;
+}
+
+.receipt-container {
+  max-width: 700px;
+  background: #fff;
+  padding: 35px;
+  margin: auto;
+  border-radius: 12px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.receipt-header {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.receipt-header h1 {
+  color: #0b1d51;
+  margin-bottom: 8px;
+}
+
+.receipt-header p {
+  font-size: 1.1rem;
+  color: #2e3d80;
+}
+
+.receipt-body {
+  margin-bottom: 30px;
+}
+
+.receipt-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+.amount-box {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #2e3d80;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.receipt-footer {
+  text-align: center;
+}
+
+.receipt-footer button {
+  background-color: #0b1d51;
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.receipt-footer button:hover {
+  background-color: #2e3d80;
+}

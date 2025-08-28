@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: #f6f9ff;
+  color: #0b1d51;
+}
+
+/* === SIDEBAR FIX === */
+.room-container {
+  margin-left: 300px;  /* same as sidebar width */
+  max-width: 1000px;
+}
+
+/* === HERO SECTION === */
+.hero-room {
+  background: linear-gradient(135deg, #0b1d51, #2e3d80);
+  color: #fff;
+  text-align: center;
+  padding: 0px 20px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.2);
+}
+
+.hero-room h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+/* === ROOM CARD === */
+.room-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.07);
+  margin-bottom: 40px;
+}
+
+.room-card h2 {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+/* === ROOM TAGS === */
+.room-tags {
+  margin-top: 12px;
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.tag {
+  padding: 6px 14px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+  font-weight: 500;
+  background: #e5e8f5;
+  color: #0b1d51;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.tag.ac {
+  background: linear-gradient(135deg, #e0f0ff, #b9dcff);
+  color: #135ca8;
+}
+
+.tag.beds {
+  background: linear-gradient(135deg, #ffe0e0, #ffc7c7);
+  color: #b61616;
+}
+
+.tag.floor {
+  background: linear-gradient(135deg, #d7ffe0, #c0f5c6);
+  color: #198a3b;
+}
+
+/* === IMAGES === */
+.room-images h3,
+.roommates h3 {
+  margin-bottom: 15px;
+  color: #2e3d80;
+}
+
+.image-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin: 20px 0;
+  justify-content: center;
+}
+
+.image-grid img {
+  width: 250px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+
+/* === ACTION BUTTONS === */
+.room-actions {
+  display: flex;
+  gap: 20px;
+  margin-top: 40px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.room-actions button {
+  background: linear-gradient(to right, #0b1d51, #2e3d80);
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+}
+
+.room-actions button:hover {
+  background: linear-gradient(to right, #2e3d80, #0b1d51);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .room-container {
+    margin-left: 0;
+    padding: 140px 20px;
+  }
+
+  .mate-grid {
+    justify-content: center;
+  }
+
+  .room-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .image-grid img {
+    width: 100%;
+    max-width: 320px;
+  }
+}
